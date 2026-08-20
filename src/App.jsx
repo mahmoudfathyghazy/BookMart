@@ -1,22 +1,34 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
+import Home from "./pages/Home";
+import Market from "./pages/Market";
+import ProductDetails from "./pages/ProductDetails";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Profile from "./pages/Profile";
+import Favorites from "./pages/Favorites";
+import Cart from "./pages/Cart";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<h1>Home</h1>} />
-        <Route path="/market" element={<h1>Market</h1>} />
-        <Route path="/product/:id" element={<h1>Product Details</h1>} />
-        <Route path="/about" element={<h1>About</h1>} />
-        <Route path="/contact" element={<h1>Contact</h1>} />
-        <Route path="/login" element={<h1>Login</h1>} />
-        <Route path="/register" element={<h1>Register</h1>} />
-        <Route path="/profile" element={<h1>Profile</h1>} />
-        <Route path="/favorites" element={<h1>Favorites</h1>} />
-        <Route path="/cart" element={<h1>Cart</h1>} />
-        <Route path="/admin" element={<h1>Admin Dashboard</h1>} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route index element={<Home />} />
+        <Route path="market" element={<Market />} />
+        <Route path="product/:id" element={<ProductDetails />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+        <Route path="profile" element={<Profile />} />
+        <Route path="favorites" element={<Favorites />} />
+        <Route path="cart" element={<Cart />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
   );
 }
 

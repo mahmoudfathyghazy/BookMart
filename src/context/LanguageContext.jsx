@@ -1,32 +1,24 @@
-import { createContext, useContext, useState } from "react";
+import { useEffect, useState } from "react";
+import { LanguageContext } from "./language-context";
+import { translations } from "../i18n/translations";
 
-const LanguageContext = createContext();
+export function LanguageProvider({ children }) {
+  const [lang, setLang] = useState("en");
 
-export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState("en");
+  useEffect(() => {
+    document.documentElement.setAttribute("lang", lang);
+    document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+  }, [lang]);
 
   const toggleLanguage = () => {
-    setLanguage((currentLanguage) =>
-      currentLanguage === "en" ? "ar" : "en"
-    );
+    setLang((prev) => (prev === "en" ? "ar" : "en"));
   };
 
-  const direction = language === "ar" ? "rtl" : "ltr";
+  const t = (key) => translations[lang]?.[key] ?? translations.en[key] ?? key;
+
+  const value = { lang, toggleLanguage, t, isArabic: lang === "ar" };
 
   return (
-    <LanguageContext.Provider
-      value={{
-        language,
-        setLanguage,
-        toggleLanguage,
-        direction,
-      }}
-    >
-      {children}
-    </LanguageContext.Provider>
+    <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>
   );
-};
-
-export const useLanguage = () => {
-  return useContext(LanguageContext);
-};
+}
