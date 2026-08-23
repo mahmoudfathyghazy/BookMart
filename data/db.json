@@ -1,0 +1,313 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstName": "Mahmoud",
+      "lastName": "Fathy",
+      "email": "mahmoud@bookmart.com",
+      "password": "123456",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "firstName": "Ahmed",
+      "lastName": "Ali",
+      "email": "ahmed@bookmart.com",
+      "password": "123456",
+      "role": "customer"
+    },
+    {
+      "id": "3",
+      "firstName": "Sara",
+      "lastName": "Mohamed",
+      "email": "sara@bookmart.com",
+      "password": "123456",
+      "role": "customer"
+    },
+    {
+      "id": "4",
+      "firstName": "Omar",
+      "lastName": "Hassan",
+      "email": "omar@bookmart.com",
+      "password": "123456",
+      "role": "customer"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Premium Blue Ballpoint Pen",
+      "description": "Smooth-writing blue ballpoint pen suitable for everyday studying.",
+      "price": 25,
+      "category": "Stationery",
+      "image": "/images/products/blue-pen.jpg",
+      "stock": 50,
+      "rating": 4.5,
+      "featured": true
+    },
+    {
+      "id": "2",
+      "name": "HB Pencils Pack",
+      "description": "Pack of HB pencils for writing, drawing and everyday school work.",
+      "price": 35,
+      "category": "Stationery",
+      "image": "/images/products/hb-pencils.jpg",
+      "stock": 40,
+      "rating": 4.4,
+      "featured": false
+    },
+    {
+      "id": "3",
+      "name": "Highlighter Set",
+      "description": "Set of colorful highlighters for notes and important study points.",
+      "price": 60,
+      "category": "Stationery",
+      "image": "/images/products/highlighters.jpg",
+      "stock": 30,
+      "rating": 4.7,
+      "featured": true
+    },
+    {
+      "id": "4",
+      "name": "Permanent Marker Set",
+      "description": "Multi-color permanent marker set for school and creative projects.",
+      "price": 75,
+      "category": "Stationery",
+      "image": "/images/products/markers.jpg",
+      "stock": 25,
+      "rating": 4.3,
+      "featured": false
+    },
+    {
+      "id": "5",
+      "name": "Correction Tape",
+      "description": "Compact correction tape for quick and clean corrections.",
+      "price": 30,
+      "category": "Stationery",
+      "image": "/images/products/correction-tape.jpg",
+      "stock": 35,
+      "rating": 4.2,
+      "featured": false
+    },
+    {
+      "id": "6",
+      "name": "A5 Spiral Notebook",
+      "description": "A5 spiral notebook with lined pages for daily notes and studying.",
+      "price": 55,
+      "category": "Notebooks & Paper",
+      "image": "/images/products/a5-notebook.jpg",
+      "stock": 45,
+      "rating": 4.6,
+      "featured": true
+    },
+    {
+      "id": "7",
+      "name": "A4 Spiral Notebook",
+      "description": "Large A4 notebook suitable for university lectures and assignments.",
+      "price": 85,
+      "category": "Notebooks & Paper",
+      "image": "/images/products/a4-notebook.jpg",
+      "stock": 35,
+      "rating": 4.7,
+      "featured": true
+    },
+    {
+      "id": "8",
+      "name": "Sticky Notes Pack",
+      "description": "Colorful sticky notes for reminders, studying and organizing tasks.",
+      "price": 40,
+      "category": "Notebooks & Paper",
+      "image": "/images/products/sticky-notes.jpg",
+      "stock": 60,
+      "rating": 4.5,
+      "featured": false
+    },
+    {
+      "id": "9",
+      "name": "A4 Drawing Pad",
+      "description": "A4 drawing pad suitable for sketches, designs and creative work.",
+      "price": 70,
+      "category": "Notebooks & Paper",
+      "image": "/images/products/drawing-pad.jpg",
+      "stock": 20,
+      "rating": 4.4,
+      "featured": false
+    },
+    {
+      "id": "10",
+      "name": "Index Cards",
+      "description": "Study index cards for revision, flashcards and quick notes.",
+      "price": 35,
+      "category": "Notebooks & Paper",
+      "image": "/images/products/index-cards.jpg",
+      "stock": 50,
+      "rating": 4.3,
+      "featured": false
+    },
+    {
+      "id": "11",
+      "name": "Student Backpack",
+      "description": "Spacious student backpack with multiple compartments for books and accessories.",
+      "price": 450,
+      "category": "Bags & Accessories",
+      "image": "/images/products/student-backpack.jpg",
+      "stock": 15,
+      "rating": 4.8,
+      "featured": true
+    },
+    {
+      "id": "12",
+      "name": "Classic Pencil Case",
+      "description": "Compact pencil case for pens, pencils, erasers and small stationery.",
+      "price": 90,
+      "category": "Bags & Accessories",
+      "image": "/images/products/pencil-case.jpg",
+      "stock": 25,
+      "rating": 4.5,
+      "featured": false
+    },
+    {
+      "id": "13",
+      "name": "Laptop Sleeve",
+      "description": "Protective laptop sleeve designed for students carrying their devices.",
+      "price": 300,
+      "category": "Bags & Accessories",
+      "image": "/images/products/laptop-sleeve.jpg",
+      "stock": 18,
+      "rating": 4.6,
+      "featured": true
+    },
+    {
+      "id": "14",
+      "name": "Student Lunch Bag",
+      "description": "Compact insulated lunch bag for students.",
+      "price": 180,
+      "category": "Bags & Accessories",
+      "image": "/images/products/lunch-bag.jpg",
+      "stock": 12,
+      "rating": 4.2,
+      "featured": false
+    },
+    {
+      "id": "15",
+      "name": "Desk Organizer",
+      "description": "Simple desk organizer for keeping stationery and study tools arranged.",
+      "price": 120,
+      "category": "Bags & Accessories",
+      "image": "/images/products/desk-organizer.jpg",
+      "stock": 22,
+      "rating": 4.4,
+      "featured": false
+    },
+    {
+      "id": "16",
+      "name": "Scientific Calculator",
+      "description": "Scientific calculator suitable for university mathematics and engineering students.",
+      "price": 450,
+      "category": "Calculators & Study Tools",
+      "image": "/images/products/scientific-calculator.jpg",
+      "stock": 20,
+      "rating": 4.9,
+      "featured": true
+    },
+    {
+      "id": "17",
+      "name": "Geometry Set",
+      "description": "Complete geometry set with ruler, compass, protractor and triangle.",
+      "price": 85,
+      "category": "Calculators & Study Tools",
+      "image": "/images/products/geometry-set.jpg",
+      "stock": 30,
+      "rating": 4.5,
+      "featured": false
+    },
+    {
+      "id": "18",
+      "name": "30cm Ruler",
+      "description": "Durable 30cm ruler for school and university use.",
+      "price": 20,
+      "category": "Calculators & Study Tools",
+      "image": "/images/products/ruler.jpg",
+      "stock": 70,
+      "rating": 4.2,
+      "featured": false
+    },
+    {
+      "id": "19",
+      "name": "Metal Compass",
+      "description": "Durable metal compass for technical drawing and geometry.",
+      "price": 45,
+      "category": "Calculators & Study Tools",
+      "image": "/images/products/compass.jpg",
+      "stock": 25,
+      "rating": 4.3,
+      "featured": false
+    },
+    {
+      "id": "20",
+      "name": "Desktop Stapler",
+      "description": "Compact stapler for organizing notes, assignments and documents.",
+      "price": 65,
+      "category": "Calculators & Study Tools",
+      "image": "/images/products/stapler.jpg",
+      "stock": 28,
+      "rating": 4.4,
+      "featured": false
+    },
+    {
+      "id": "21",
+      "name": "Wireless Mouse",
+      "description": "Comfortable wireless mouse suitable for laptops and university work.",
+      "price": 350,
+      "category": "Electronics",
+      "image": "/images/products/wireless-mouse.jpg",
+      "stock": 18,
+      "rating": 4.6,
+      "featured": true
+    },
+    {
+      "id": "22",
+      "name": "64GB USB Flash Drive",
+      "description": "64GB USB flash drive for storing university documents and files.",
+      "price": 280,
+      "category": "Electronics",
+      "image": "/images/products/usb-drive.jpg",
+      "stock": 25,
+      "rating": 4.5,
+      "featured": false
+    },
+    {
+      "id": "23",
+      "name": "USB-C Cable",
+      "description": "Durable USB-C charging and data cable.",
+      "price": 150,
+      "category": "Electronics",
+      "image": "/images/products/usb-cable.jpg",
+      "stock": 40,
+      "rating": 4.3,
+      "featured": false
+    },
+    {
+      "id": "24",
+      "name": "Student Earphones",
+      "description": "Compact wired earphones suitable for lectures, calls and study.",
+      "price": 220,
+      "category": "Electronics",
+      "image": "/images/products/earphones.jpg",
+      "stock": 30,
+      "rating": 4.2,
+      "featured": false
+    },
+    {
+      "id": "25",
+      "name": "10000mAh Power Bank",
+      "description": "Portable 10000mAh power bank for charging devices during university days.",
+      "price": 650,
+      "category": "Electronics",
+      "image": "/images/products/power-bank.jpg",
+      "stock": 14,
+      "rating": 4.7,
+      "featured": true
+    }
+  ]
+}
