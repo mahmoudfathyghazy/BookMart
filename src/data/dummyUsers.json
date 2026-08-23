@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "name": "Test User",
+    "email": "test@bookmart.com",
+    "password": "123456",
+    "role": "customer"
+  },
+  {
+    "id": "2",
+    "name": "Admin User",
+    "email": "admin@bookmart.com",
+    "password": "admin123",
+    "role": "admin"
+  },
+  {
+    "name": "Omar Elshenawy",
+    "email": "elshenawyomar93@gmail.com",
+    "password": "01030987413",
+    "role": "customer",
+    "id": "6M9SbyJZFxY"
+  },
+  {
+    "name": "mahmoud samir",
+    "email": "mahmoudfathyghazy@gamil.com",
+    "password": "123456",
+    "role": "customer",
+    "id": "gsheEOdxLMg"
+  }
+]

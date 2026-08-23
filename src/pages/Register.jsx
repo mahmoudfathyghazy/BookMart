@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import Input from "../components/Input";
 import Button from "../components/Button";
 import { useAuth } from "../hooks/useAuth";
+import { useLanguage } from "../hooks/useLanguage";
 
 function Register() {
   const [form, setForm] = useState({
@@ -15,6 +16,7 @@ function Register() {
   const [submitting, setSubmitting] = useState(false);
 
   const { register, error } = useAuth();
+  const { t } = useLanguage();
   const navigate = useNavigate();
 
   const handleChange = (field) => (e) =>
@@ -22,11 +24,11 @@ function Register() {
 
   const validate = () => {
     const errors = {};
-    if (!form.name.trim()) errors.name = "Name is required.";
-    if (!form.email.trim()) errors.email = "Email is required.";
-    if (!form.password) errors.password = "Password is required.";
+    if (!form.name.trim()) errors.name = t("nameRequired");
+    if (!form.email.trim()) errors.email = t("emailRequired");
+    if (!form.password) errors.password = t("passwordRequired");
     if (form.password !== form.confirmPassword) {
-      errors.confirmPassword = "Passwords must match.";
+      errors.confirmPassword = t("passwordsMatch");
     }
     setFieldErrors(errors);
     return Object.keys(errors).length === 0;
@@ -44,11 +46,11 @@ function Register() {
 
   return (
     <div className="container py-5" style={{ maxWidth: "420px" }}>
-      <h1 className="h3 mb-4">Register</h1>
+      <h1 className="h3 mb-4">{t("register")}</h1>
 
       <form onSubmit={handleSubmit}>
         <Input
-          label="Name"
+          label={t("contactName")}
           name="name"
           value={form.name}
           onChange={handleChange("name")}
@@ -56,7 +58,7 @@ function Register() {
           required
         />
         <Input
-          label="Email"
+          label={t("contactEmail")}
           name="email"
           type="email"
           value={form.email}
@@ -65,7 +67,7 @@ function Register() {
           required
         />
         <Input
-          label="Password"
+          label={t("passwordLabel")}
           name="password"
           type="password"
           value={form.password}
@@ -74,7 +76,7 @@ function Register() {
           required
         />
         <Input
-          label="Confirm Password"
+          label={t("confirmPassword")}
           name="confirmPassword"
           type="password"
           value={form.confirmPassword}
@@ -83,15 +85,15 @@ function Register() {
           required
         />
 
-        {error && <p className="text-danger small">{error}</p>}
+        {error && <p className="text-danger small">{t(error)}</p>}
 
         <Button type="submit" disabled={submitting} className="w-100">
-          {submitting ? "Creating account..." : "Register"}
+          {submitting ? t("creatingAccount") : t("register")}
         </Button>
       </form>
 
       <p className="mt-3 text-center">
-        Already have an account? <Link to="/login">Login</Link>
+        {t("haveAccount")} <Link to="/login">{t("login")}</Link>
       </p>
     </div>
   );

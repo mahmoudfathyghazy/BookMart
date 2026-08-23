@@ -1,30 +1,26 @@
+import { useLanguage } from "../hooks/useLanguage";
+
+/**
+ * About page — all copy comes from the i18n translations file so the
+ * page switches between English and Arabic with the AR/EN toggle.
+ */
 function About() {
+  const { t } = useLanguage();
+
   return (
     <div className="container py-5" style={{ maxWidth: "720px" }}>
-      <h1 className="h3 mb-4">About BookMart</h1>
+      <h1 className="h3 mb-4">{t("aboutTitle")}</h1>
 
-      <h2 className="h5">What is BookMart?</h2>
-      <p>
-        BookMart is a simple online marketplace for school supplies and a
-        small selection of electronics, built to make back-to-school shopping
-        easier for students.
-      </p>
+      <h2 className="h5">{t("aboutWhatTitle")}</h2>
+      <p>{t("aboutWhatBody")}</p>
 
-      <h2 className="h5">What can users buy?</h2>
-      <p>
-        Notebooks, stationery, calculators, bags, and a handful of everyday
-        electronics and accessories — everything you'd need on a typical
-        school supply list.
-      </p>
+      <h2 className="h5">{t("aboutBuyTitle")}</h2>
+      <p>{t("aboutBuyBody")}</p>
 
-      <h2 className="h5">Why did we build it?</h2>
-      <p>
-        BookMart was developed as a university React project, focused on
-        practicing component-based UI design, routing, and state management
-        in a real-world style application.
-      </p>
+      <h2 className="h5">{t("aboutWhyTitle")}</h2>
+      <p>{t("aboutWhyBody")}</p>
 
-      <h2 className="h5">Technologies used</h2>
+      <h2 className="h5">{t("aboutTechTitle")}</h2>
       <ul>
         <li>React 19 + Vite</li>
         <li>React Router</li>

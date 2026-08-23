@@ -31,7 +31,7 @@ function ProductDetails() {
           )
         );
       })
-      .catch(() => setError("Could not load this product."))
+      .catch(() => setError("loadFailed"))
       .finally(() => setLoading(false));
   };
 
@@ -49,8 +49,8 @@ function ProductDetails() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
-  if (loading) return <LoadingSpinner label="Loading product..." />;
-  if (error) return <div className="container py-5"><ErrorMessage message={error} onRetry={handleRetry} /></div>;
+  if (loading) return <LoadingSpinner label={t("loadingProduct")} />;
+  if (error) return <div className="container py-5"><ErrorMessage message={t(error)} onRetry={handleRetry} /></div>;
   if (!product) return null;
 
   return (

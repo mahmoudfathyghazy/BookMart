@@ -1,14 +1,17 @@
 import { Link } from "react-router-dom";
 import { useLanguage } from "../hooks/useLanguage";
+import { getLocalizedName } from "../utils/localization";
+import { handleImageError } from "../utils/imageFallback";
 
 /**
  * Shared product card used across Home, Market, Favorites, etc.
  * Shape of `product`:
- * { id, name, category, price, image, rating?, onSale?, discountPrice? }
+ * { id, name, name_ar, category, price, image, rating?, onSale?, discountPrice? }
  */
 function ProductCard({ product, onAddToCart, onToggleFavorite, isFavorite }) {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const hasDiscount = product.onSale && product.discountPrice;
+  const displayName = getLocalizedName(product, lang);
 
   return (
     <div className="card h-100 product-card position-relative">
@@ -17,16 +20,17 @@ function ProductCard({ product, onAddToCart, onToggleFavorite, isFavorite }) {
       <Link to={`/product/${product.id}`} className="bm-product-img-wrap d-block" style={{ height: "180px" }}>
         <img
           src={product.image}
-          alt={product.name}
+          alt={displayName}
           className="w-100 h-100"
           style={{ objectFit: "contain" }}
+          onError={handleImageError}
         />
       </Link>
       <div className="card-body d-flex flex-column">
-        <span className="text-muted small text-uppercase">{product.category}</span>
+        <span className="text-muted small text-uppercase">{t(product.category)}</span>
         <h6 className="card-title mt-1">
           <Link to={`/product/${product.id}`} className="text-decoration-none">
-            {product.name}
+            {displayName}
           </Link>
         </h6>
 

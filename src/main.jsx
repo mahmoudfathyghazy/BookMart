@@ -4,11 +4,11 @@ import { BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import App from "./App.jsx";
-import { CartProvider } from "./context/CartContext";
-import { FavoritesProvider } from "./context/FavoritesContext";
-import { AuthProvider } from "./context/AuthContext";
-import { ThemeProvider } from "./context/ThemeContext";
-import { LanguageProvider } from "./context/LanguageContext";
+import { CartProvider } from "./context/CartProvider";
+import { FavoritesProvider } from "./context/FavoritesProvider";
+import { AuthProvider } from "./context/AuthProvider";
+import { ThemeProvider } from "./context/ThemeProvider";
+import { LanguageProvider } from "./context/LanguageProvider";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

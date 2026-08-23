@@ -7,12 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "server": "json-server data/db.json"
+    "preview": "vite preview"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
-    "json-server": "^1.0.0-beta.15",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-router-dom": "^7.18.2"

@@ -21,7 +21,7 @@ function Home() {
     api
       .getProducts()
       .then(setProducts)
-      .catch(() => setError("Could not load the homepage. Is json-server running?"))
+      .catch(() => setError("loadFailed"))
       .finally(() => setLoading(false));
   };
 
@@ -77,10 +77,10 @@ function Home() {
         </div>
       </section>
 
-      {loading && <LoadingSpinner label="Loading..." />}
+      {loading && <LoadingSpinner label={t("loading")} />}
       {error && (
         <div className="container py-5">
-          <ErrorMessage message={error} onRetry={handleRetry} />
+          <ErrorMessage message={t(error)} onRetry={handleRetry} />
         </div>
       )}
 

@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
-import { getProducts } from "../services/productService";
+import api from "../services/api";
 
+/**
+ * Shared hook that loads the full product catalog from json-server.
+ * This is the single data-fetching entry point for product lists.
+ */
 const useProducts = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -10,9 +14,7 @@ const useProducts = () => {
     const fetchProducts = async () => {
       try {
         setLoading(true);
-
-        const data = await getProducts();
-
+        const data = await api.getProducts();
         setProducts(data);
         setError(null);
       } catch (err) {

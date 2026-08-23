@@ -70,6 +70,13 @@ function Navbar() {
             <li className="nav-item">
               <NavLink className={linkClass} to="/contact">{t("contact")}</NavLink>
             </li>
+            {user?.role === "admin" && (
+              <li className="nav-item">
+                <NavLink className={linkClass} to="/admin">
+                  Admin
+                </NavLink>
+              </li>
+            )}
           </ul>
 
           <div className="d-flex align-items-center gap-2">

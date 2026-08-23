@@ -10,6 +10,7 @@ import api from "../services/api";
 import { useCart } from "../hooks/useCart";
 import { useFavorites } from "../hooks/useFavorites";
 import { useLanguage } from "../hooks/useLanguage";
+import { getLocalizedCategory } from "../utils/localization";
 
 function Market() {
   const [products, setProducts] = useState([]);
@@ -26,7 +27,7 @@ function Market() {
 
   const { addToCart } = useCart();
   const { toggleFavorite, isFavorite } = useFavorites();
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   const fetchData = () => {
     Promise.all([api.getProducts(), api.getCategories()])
@@ -34,7 +35,7 @@ function Market() {
         setProducts(prods);
         setCategories(cats);
       })
-      .catch(() => setError("Could not load products. Is json-server running?"))
+      .catch(() => setError("loadFailed"))
       .finally(() => setLoading(false));
   };
 
@@ -92,9 +93,15 @@ function Market() {
     <div className="container py-5">
       <h1 className="h3 mb-4">{t("market")}</h1>
 
-      <div className="row g-3 mb-2">
+      {/* Search + sort share one row; bottom-aligned so both controls
+          sit on the same level despite the sort label above it. */}
+      <div className="row g-3 mb-2 align-items-lg-end">
         <div className="col-12 col-lg-8">
-          <SearchBar value={search} onChange={setSearch} />
+          <SearchBar
+            value={search}
+            onChange={setSearch}
+            placeholder={t("searchPlaceholder")}
+          />
         </div>
         <div className="col-12 col-lg-4">
           <ProductSort sort={sort} onSortChange={setSort} />
@@ -109,8 +116,8 @@ function Market() {
         />
       )}
 
-      {loading && <LoadingSpinner label="Loading products..." />}
-      {error && <ErrorMessage message={error} onRetry={handleRetry} />}
+      {loading && <LoadingSpinner label={t("loadingProducts")} />}
+      {error && <ErrorMessage message={t(error)} onRetry={handleRetry} />}
 
       {!loading &&
         !error &&
@@ -124,7 +131,7 @@ function Market() {
               id={`category-${cat.slug}`}
               className="bm-category-row mb-5"
             >
-              <h2 className="bm-section-title h5">{cat.name}</h2>
+              <h2 className="bm-section-title h5">{getLocalizedCategory(cat, lang)}</h2>
               <ProductGrid
                 products={catProducts}
                 onAddToCart={addToCart}

@@ -1,0 +1,51 @@
+[
+  {
+    "id": "1",
+    "name": "Calculator",
+    "name_ar": "الآلة الحاسبة",
+    "slug": "calculator",
+    "image": "/images/categories/calculator.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Notebook",
+    "name_ar": "الدفاتر",
+    "slug": "notebook",
+    "image": "/images/categories/notebook.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Pencil",
+    "name_ar": "أقلام الرصاص",
+    "slug": "pencil",
+    "image": "/images/categories/pencil.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Backpack",
+    "name_ar": "الشنط",
+    "slug": "backpack",
+    "image": "/images/categories/backpack.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Ballpoint Pen",
+    "name_ar": "أقلام الجاف",
+    "slug": "ballpoint-pen",
+    "image": "/images/categories/ballpoint-pen.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Eraser",
+    "name_ar": "الأستيكة",
+    "slug": "eraser",
+    "image": "/images/categories/eraser.jpg"
+  },
+  {
+    "id": "7",
+    "name": "Organizer",
+    "name_ar": "المنظمات",
+    "slug": "organizer",
+    "image": "/images/categories/organizer.jpg"
+  }
+]

@@ -1,5 +1,10 @@
 import { useLanguage } from "../../hooks/useLanguage";
 
+/**
+ * Sort dropdown for the Market page.
+ * Option labels come from the i18n translations so the filter
+ * switches between English and Arabic with the rest of the app.
+ */
 function ProductSort({ sort, onSortChange }) {
   const { t } = useLanguage();
 
@@ -11,11 +16,11 @@ function ProductSort({ sort, onSortChange }) {
         value={sort}
         onChange={(e) => onSortChange(e.target.value)}
       >
-        <option value="default">Default</option>
-        <option value="price-asc">Price: Low to High</option>
-        <option value="price-desc">Price: High to Low</option>
-        <option value="name-asc">Name: A to Z</option>
-        <option value="name-desc">Name: Z to A</option>
+        <option value="default">{t("sortDefault")}</option>
+        <option value="price-asc">{t("sortPriceAsc")}</option>
+        <option value="price-desc">{t("sortPriceDesc")}</option>
+        <option value="name-asc">{t("sortNameAsc")}</option>
+        <option value="name-desc">{t("sortNameDesc")}</option>
       </select>
     </div>
   );

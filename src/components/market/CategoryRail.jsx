@@ -1,4 +1,9 @@
+import { useLanguage } from "../../hooks/useLanguage";
+import { getLocalizedCategory } from "../../utils/localization";
+
 function CategoryRail({ categories, activeCategory, onSelect }) {
+  const { lang } = useLanguage();
+
   const handleClick = (slug) => {
     onSelect(slug);
     const el = document.getElementById(`category-${slug}`);
@@ -16,7 +21,7 @@ function CategoryRail({ categories, activeCategory, onSelect }) {
           className={`bm-category-pill${activeCategory === cat.slug ? " active" : ""}`}
           onClick={() => handleClick(cat.slug)}
         >
-          {cat.name}
+          {getLocalizedCategory(cat, lang)}
         </button>
       ))}
     </div>

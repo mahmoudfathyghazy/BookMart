@@ -1,13 +1,15 @@
 import { useLanguage } from "../../hooks/useLanguage";
+import { getLocalizedName } from "../../utils/localization";
 
 function ProductInfo({ product }) {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const hasDiscount = product.onSale && product.discountPrice;
+  const displayName = getLocalizedName(product, lang);
 
   return (
     <div>
-      <span className="text-muted text-uppercase small">{product.category}</span>
-      <h1 className="h3 mt-1">{product.name}</h1>
+      <span className="text-muted text-uppercase small">{t(product.category)}</span>
+      <h1 className="h3 mt-1">{displayName}</h1>
       <p className="text-muted">{product.description}</p>
       <h3 className="text-primary fw-bold">
         {hasDiscount && (
