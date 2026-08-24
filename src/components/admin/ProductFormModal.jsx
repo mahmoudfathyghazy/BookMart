@@ -38,8 +38,8 @@ function ProductFormModal({ product, categories, onSave, onClose }) {
   return (
     <>
       <div className="modal fade show d-block" tabIndex="-1" role="dialog">
-        <div className="modal-dialog modal-lg modal-dialog-scrollable">
-          <div className="modal-content">
+        <div className="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+          <div className="modal-content bm-edit-modal">
             <div className="modal-header">
               <h5 className="modal-title">{t("editProduct")}</h5>
               <button type="button" className="btn-close" onClick={onClose} aria-label={t("closeLabel")} />

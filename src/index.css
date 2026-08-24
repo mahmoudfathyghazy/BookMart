@@ -472,3 +472,14 @@ body {
 [dir="rtl"] .bm-navbar__top .flex-grow-1 {
   order: 0;
 }
+/* ============================================================
+   Admin Edit Product Modal
+   ============================================================ */
+.bm-edit-modal {
+  max-height: 90vh;
+}
+
+.bm-edit-modal .modal-body {
+  overflow-y: auto;
+  max-height: calc(90vh - 140px);
+}

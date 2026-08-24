@@ -70,13 +70,18 @@ function Market() {
     }
   };
 
-  const filteredProducts = useMemo(
-    () =>
-      products.filter((product) =>
-        product.name.toLowerCase().includes(search.toLowerCase())
-      ),
-    [products, search]
-  );
+  const filteredProducts = useMemo(() => {
+  const searchTerm = search.trim().toLowerCase();
+
+  if (!searchTerm) return products;
+
+  return products.filter((product) => {
+    const nameEn = product.name?.toLowerCase() || "";
+    const nameAr = product.name_ar?.toLowerCase() || "";
+
+    return nameEn.includes(searchTerm) || nameAr.includes(searchTerm);
+  });
+}, [products, search]);
 
   const productsByCategory = useMemo(() => {
     const map = {};
