@@ -150,5 +150,4 @@ src/
 
 ---
 
-Built as a university React project — practicing component-based UI design,
-routing, context state management and responsive design.
+Built as a graduation/training project at ITI (Information Technology Institute) — practicing component-based UI design, routing, context state management and responsive design.
