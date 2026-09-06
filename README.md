@@ -150,4 +150,4 @@ src/
 
 ---
 
-Built as a graduation/training project at ITI (Information Technology Institute) — practicing component-based UI design, routing, context state management and responsive design.
+Built as a graduation project for the Front-End React Track at ITI (Information Technology Institute) — practicing component-based UI design, routing, context state management and responsive design.
