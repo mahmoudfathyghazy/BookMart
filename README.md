@@ -72,7 +72,7 @@ Accounts are seeded locally into your browser — they are mock credentials only
 | --------------------------- | -------------- | -------- |
 | `admin@bookmart.com`        | `admin123`     | admin    |
 | `test@bookmart.com`         | `123456`       | customer |
-| `elshenawyomar93@gmail.com` | `01030987413`  | customer |
+| `Ghazy@gmail.com` | `12345678`  | customer |
 
 ## Routes
 
